@@ -23,9 +23,9 @@ I tried many distributions (Lubuntu, Kubuntu, Ubuntu, Majaro, Plasma bigscreen, 
 Finally, I ended up using a Picroft/Rasbian base.  The problem was the older versions of Qt in buster.  In my case, I went ahead and added the bullseye distros from debian (armhf) to get to the versions needed for all the skills and for mycroft-gui-app.
 - Rasbian install - [Raspios - armhf](https://downloads.raspberrypi.org/raspios_full_armhf_latest)
 - Debian Bullseye - /etc/apt/sources.list - deb http://deb.debian.org/debian bullseye main contrib non-free
-- Then I just did a standard mycroft-core and mycroft-gui download install (git clone, bash dev_setup.sh)
+- Then I just did a standard mycroft-core and mycroft-gui download and install (git clone, bash dev_setup.sh)
 - I added two files in the .config/autostart directory to start the core and gui on boot (pi user autologin)
-- Added a lxde-pci-rc.xml file to the ~/.config/openbox directory (/etc/xdg/openbox/lxde-pi-rc.xml), then add lines to the <applications> secton:
+- Added a lxde-pci-rc.xml file to the ~/.config/openbox directory (/etc/xdg/openbox/lxde-pi-rc.xml), then add lines to the "applications" secton:
 ```
    <application title="mycroft.gui">
       <skip_taskbar>yes</skip_taskbar>
