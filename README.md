@@ -13,6 +13,7 @@ Here is a list of suggested hardware items needed to build a picroft-touch7.
 - Microphone - $30 - [TONOR G11](https://www.tonormic.com/products/tonor-g11-conference-usb-microphone)
 
   Note: Any microphone should work.  I like this one because of the multidirectional capability, but I've tried others and they work too.
+- SD Card - $8 - 16G is fine. [walmart](https://www.walmart.com/ip/SanDisk-Imaging-Ultra-microSDHC-16GB-UHS-I-Memory-Card/46700581)
 - Stand - $0 - I just 3d printed a simple set of legs.
 - Speaker - ?? - I love the Ultimate Ears Boom speakers for playing music.  I already had a few of these around the house, so I am using these.
 
