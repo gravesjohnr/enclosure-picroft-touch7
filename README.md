@@ -25,6 +25,11 @@ Finally, I ended up using a Picroft/Rasbian base.  The problem was the older ver
 - Debian Bullseye - /etc/apt/sources.list - deb http://deb.debian.org/debian bullseye main contrib non-free
 - Then I just did a standard mycroft-core and mycroft-gui download and install (git clone, bash dev_setup.sh)
 - I added two files in the .config/autostart directory to start the core and gui on boot (pi user autologin)
+- Make sure QT_FILE_SELECTORS is set to picroft_touch7 
+
+  .bashrc: export QT_FILE_SELECTORS=picroft_touch7
+  In desktop files: Exec=env QT_FILE_SELECTORS=picroft_touch7 mycroft-gui-app --hideTextInput --maximize
+  This is so that the skills will use the picroft_touch7 versions of screen layouts.
 - Added a lxde-pci-rc.xml file to the ~/.config/openbox directory (/etc/xdg/openbox/lxde-pi-rc.xml), then add lines to the "applications" secton:
 ```
    <application title="mycroft.gui">
@@ -35,7 +40,39 @@ Finally, I ended up using a Picroft/Rasbian base.  The problem was the older ver
       <fullscreen>yes</fullscreen>
     </application>
 ```
+- Modified /etc/mycroft/mycroft.conf to use this enclosure
+```
+{
+  "enclosure": {
+     "platform": "picroft_touch7"
+  }
+}
+```
+
 - Added skills as needed.
 
-
-
+# Skills
+Here is a list of skills and capabilities I wanted to make sure worked on this platform.
+*Hey Mycroft*
+- What's the weather forcast?
+- What’s the weather?
+- Play positive encouraging K-Love on IHeartRadio
+- Play contemporary on Spotify
+- Set a timer for ??? Minutes
+- Announce – Dinner is ready
+- Add milk to list Safeway
+- Turn on den light
+- Turn off basement stairs light
+- Youtube Nobody by casting crowns
+These are the main skills I use and have modified to support the 7" screen
+- mycroft-picroft_touch7.mycroftai - a copy of mycroft-mark-2.mycroftai with modifications for display and sound/volume.
+- mycroft-playback-control.mycroftai (Modified to use picroft_touch7 UI)
+- todoist-skill - Personally developed skill to interact with Todoist
+- homeassistant.mycroftai - Added UI capabilities
+- mycroft-skill-iheartradio.johnbartkiw - Added UI capabilities
+- youtube-skill.aiix - Used as is, but I needed to install several packages and use QtMultimedia 12 instead of 13
+- mycroft-spotify.forslund - Used as is
+*To Do*
+I want to modify these skills to use the 7" screen.
+- mycroft-alarm.mycroftai
+- mycroft-timer.mycroftai
