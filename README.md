@@ -6,7 +6,7 @@ I had a goal to try and keep this project under $150.
 Here is a list of suggested hardware items needed to build a picroft-touch7.
 - Raspberry Pi4 (4G) - $50 - [microcenter](https://www.microcenter.com/product/609038/raspberry-pi-4-model-b---4gb-ddr4)
 - 7" Touchscreen - $60 - [microcenter](https://www.microcenter.com/product/613541/element-14-7-pi-touchscreen-lcd-display)
-- Fan Case - $7 - [microcenter](https://www.microcenter.com/product/610384/micro-connectors-acrylic-stackable-raspberry-pi-4-case-with-power-adapter-and-fan)
+- Fan Case - $17 - [microcenter](https://www.microcenter.com/product/610384/micro-connectors-acrylic-stackable-raspberry-pi-4-case-with-power-adapter-and-fan)
 
   Note: Any case will do, but a fan is really needed to avoid overheating, especially when playing videos.
   Note: When you connect the fan to a 3v supply, it tends to be very quiet and is good enough to keep the temperature under 60degC
