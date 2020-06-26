@@ -11,9 +11,11 @@ Here is a list of suggested hardware items needed to build a picroft-touch7.
   Note: Any case will do, but a fan is really needed to avoid overheating, especially when playing videos.
   Note: When you connect the fan to a 3v supply, it tends to be very quiet and is good enough to keep the temperature under 60degC
 - Microphone - $30 - [TONOR G11](https://www.tonormic.com/products/tonor-g11-conference-usb-microphone)
+
   Note: Any microphone should work.  I like this one because of the multidirectional capability, but I've tried others and they work too.
 - Stand - $0 - I just 3d printed a simple set of legs.
 - Speaker - ?? - I love the Ultimate Ears Boom speakers for playing music.  I already had a few of these around the house, so I am using these.
+
   Note: Any speaker will work, it just depends on the quality you want.  The Pi4 analog output is not very good, so I'd recommend a BT speaker or add a DAC hat.
   
 # Software
@@ -24,7 +26,8 @@ Finally, I ended up using a Picroft/Rasbian base.  The problem was the older ver
 - Then I just did a standard mycroft-core and mycroft-gui download install (git clone, bash dev_setup.sh)
 - I added two files in the .config/autostart directory to start the core and gui on boot (pi user autologin)
 - Added a lxde-pci-rc.xml file to the ~/.config/openbox directory (/etc/xdg/openbox/lxde-pi-rc.xml), then add lines to the <applications> secton:
-    <application title="mycroft.gui">
+
+   <application title="mycroft.gui">
       <skip_taskbar>yes</skip_taskbar>
       <decor>no</decor>
       <shade>no</shade>
