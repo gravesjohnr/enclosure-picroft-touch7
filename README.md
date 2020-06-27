@@ -65,6 +65,7 @@ Here is a list of skills and capabilities I wanted to make sure worked on this p
 - Turn on den light
 - Turn off basement stairs light
 - Youtube Nobody by casting crowns
+
 These are the main skills I use and have modified to support the 7" screen
 - mycroft-picroft_touch7.mycroftai - a copy of mycroft-mark-2.mycroftai with modifications for display and sound/volume.
 - mycroft-playback-control.mycroftai (Modified to use picroft_touch7 UI)
